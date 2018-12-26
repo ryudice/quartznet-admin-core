@@ -7,7 +7,7 @@ namespace QuartzApiCore.API
 {
     public static class QuartzApiCore
     {
-        public static void Start(IScheduler scheduler)
+        public static void Start(IScheduler scheduler, int port = 5000)
         {
             
             
@@ -15,6 +15,7 @@ namespace QuartzApiCore.API
                 .UseStartup<Startup>()
                 .ConfigureServices(collection => { collection.AddSingleton(scheduler); }
                     )
+                .UseUrls($"http://*:{port}")
                 .Build()
                 .Run();
         }

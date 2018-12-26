@@ -4,16 +4,16 @@
 #tool "nuget:?package=GitVersion.CommandLine"
 #addin "Cake.FileHelpers"
 #addin "Cake.Npm"
-
+#addin "Cake.ArgumentHelpers"
 
 var target = Argument("target", "Publish Docker");
 var solution = "QuartzApi.Core.sln";
-// var version =  GitVersion().SemVer;
-var version =  "1.1.2";
+var version =  GitVersion().FullSemVer;
+
 
 var mark = new HeyRed.MarkdownSharp.Markdown();
-var nugetSource = "https://api.nuget.org/v3/index.json";
-var nugetApiKey = "oy2nsbzxi25t77vpnwzaabkfeukexbvupbxi3k4spwiue4";
+var nugetSource = ArgumentOrEnvironmentVariable("NUGET_FEED", "https://api.nuget.org/v3/index.json");
+var nugetApiKey = ArgumentOrEnvironmentVariable("NUGET_API_KEY","");
 
 var mainProjectDirectory = "src/QuartzApiCore.API/";
 
@@ -86,6 +86,7 @@ Task("Pack")
          NoBuild = false,
          MSBuildSettings = new DotNetCoreMSBuildSettings().SetVersion(version)
          .WithProperty("PackageDescription",summary)
+         .WithProperty("PackageId","QuartzAdmin")
          .WithProperty("Authors","Roberto Yudice")
      };
     DotNetCorePack("src/QuartzApiCore.API/QuartzApiCore.API.csproj",settings);
