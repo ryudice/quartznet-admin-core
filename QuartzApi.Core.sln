@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzApiCore.API", "src\QuartzApiCore.API\QuartzApiCore.API.csproj", "{B24DCE52-4748-4AA6-90F0-5F1152EC943A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleConsoleApp", "src\SampleConsoleApp\SampleConsoleApp.csproj", "{D740F388-A2BA-490B-A53F-A3622AFD74DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzApiCore.Tests", "tests\QuartzApiCore.Tests\QuartzApiCore.Tests.csproj", "{7E99C089-BB2D-4134-9FEC-80966D1C9A7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B24DCE52-4748-4AA6-90F0-5F1152EC943A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24DCE52-4748-4AA6-90F0-5F1152EC943A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24DCE52-4748-4AA6-90F0-5F1152EC943A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24DCE52-4748-4AA6-90F0-5F1152EC943A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D740F388-A2BA-490B-A53F-A3622AFD74DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D740F388-A2BA-490B-A53F-A3622AFD74DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D740F388-A2BA-490B-A53F-A3622AFD74DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D740F388-A2BA-490B-A53F-A3622AFD74DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E99C089-BB2D-4134-9FEC-80966D1C9A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E99C089-BB2D-4134-9FEC-80966D1C9A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E99C089-BB2D-4134-9FEC-80966D1C9A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E99C089-BB2D-4134-9FEC-80966D1C9A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
