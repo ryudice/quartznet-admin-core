@@ -20,7 +20,7 @@ var mainProjectDirectory = "src/QuartzApiCore.API/";
 var assetsDirectory = $"{mainProjectDirectory}/wwwroot";
 
 Information($"Using version {version}");
-Information($"NuGet feed: {nugetSource}")
+Information($"NuGet feed: {nugetSource}");
 var nugetPublishDirectory = "artifacts";
 
 
